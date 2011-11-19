@@ -1,29 +1,43 @@
-from State import State
 import pygame
 import pygame.gfxdraw
-import util
 from pygame.locals import *
 
+import util
+import sys
+
+from State import State
+from Actor import Actor
+from Player import Player
+
+from config import *
+
 class GameState(State):
+	'''
+		State for game playing mode.
+	'''
+	
+	bgGroup = pygame.sprite.OrderedUpdates()
+	playerGroup = pygame.sprite.RenderPlain()
+
 	def __init__(self, main):
 		# transition from another state
 		State.__init__(self,main)
-		
-		self.bgGroup = pygame.sprite.OrderedUpdates()
-		self.playerGroup = pygame.sprite.RenderPlain()
-	
+
+		self.loadPlayer()
+
 	def __del__(self):
 		# transition to another state
 		pass
 		
-	def loadPlayer(self, imagefile):
-		self.player = Actor(imagefile, -1)
-		self.playerGroup.add(self.player)
-		return self.player
+	def loadPlayer(self):
+		self.player = Player()
+		GameState.playerGroup.add(self.player)
 	
 	def update(self):
 		self.checkCollisions()
 		State.update(self);
+
+		GameState.playerGroup.update()
 	
 	def handleEvent(self):
 		# For each event that occurs this frame
@@ -38,7 +52,6 @@ class GameState(State):
 			self.handleKey(event)
 		
 	def handleKey(self, event):
-		# handle keyboard keys
 		'''
 			Handle input from user keyboard
 		'''
@@ -46,17 +59,30 @@ class GameState(State):
 			# exit game
 			if event.key == K_ESCAPE:
 				sys.exit(1)
+			elif event.key == MOVEMENT_KEYS[0]:
+				self.player.move(0)
+			elif event.key == MOVEMENT_KEYS[1]:
+				self.player.move(1)
+			elif event.key == MOVEMENT_KEYS[2]:
+				self.player.move(2)
+			elif event.key == MOVEMENT_KEYS[3]:
+				self.player.move(3)
 
 		elif event.type == pygame.KEYUP:
-			pass
+			if event.key in MOVEMENT_KEYS:
+				self.player.move(-1)
 			
 	def checkCollisions(self):
 		pass
 		
 	def draw(self):
+		self.main.screen.fill((52,183,183))
+
 		# draw background
-		self.bgGroup.draw(self.main.screen)
+		GameState.bgGroup.draw(self.main.screen)
+
 		# draw player	
-		self.playerGroup.draw(self.main.screen)
+		GameState.playerGroup.draw(self.main.screen)
 		
+		# flip screen
 		State.draw(self)
