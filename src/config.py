@@ -4,7 +4,7 @@ from pygame.locals import *
 
 WIDTH = 1024
 HEIGHT = 768
-IS_FULLSCREEN = True
+IS_FULLSCREEN = False
 FRAME_RATE = 60
 
 GAME_TITLE = "Hackathon!"
