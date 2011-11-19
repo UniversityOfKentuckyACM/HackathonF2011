@@ -14,6 +14,7 @@ MOVEMENT_KEYS = [K_w, K_s, K_a, K_d]
 
 GAME_IMAGES = "images"
 GAME_SOUNDS = "sounds"
+GAME_MAPS = "maps"
 
 #BACKGROUND_IMAGE = "sea.png"
 
