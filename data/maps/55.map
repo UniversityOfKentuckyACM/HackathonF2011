@@ -1,12 +1,11 @@
 55.map
-28,24
 [RSC]
-G,grass.png
-M,mountain.png
-#,ocean.png
+G grass.png
+M mountain.png
+# ocean.png
 [AT]
 MMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MM##########################
+MMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MM##########################
 MM##########################
 MM##########################
@@ -54,3 +53,24 @@ MM###################GGGGGGG
 MM###################GGGGGGG
 MM###################GGGGGGG
 MM###################GGGGGGG
+[ENTITY]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
