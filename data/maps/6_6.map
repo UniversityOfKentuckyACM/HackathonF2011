@@ -1,11 +1,11 @@
 6_6.map
 [RSC]
-G grass.png
+G grassDead.png
 M mountain.png
 # water.png
 S waterToxicWithStone.png
 W wall.png
-T tree.png
+T treeDying.png
 R rubble.png
 [AT]
 MM.......WWWWWWWWWWWWWWWWWWW
