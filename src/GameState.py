@@ -4,10 +4,12 @@ from pygame.locals import *
 
 import util
 import sys
+import math
 
 from State import State
 from Actor import Actor
 from Player import Player
+from Vector2 import Vector2
 
 from config import *
 
@@ -40,6 +42,10 @@ class GameState(State):
 		GameState.playerGroup.update()
 	
 	def handleEvent(self):
+		# handle mouse
+		mousePos = Vector2(pygame.mouse.get_pos())
+		self.player.orient(mousePos)
+			
 		# For each event that occurs this frame
 		for event in pygame.event.get():
 			# If user exits the window
@@ -47,7 +53,9 @@ class GameState(State):
 				sys.exit(0)
 
 			# handle mouse
-			
+			#mousePos = Vector2(pygame.mouse.get_pos())
+			#self.player.orient(mousePos)
+
 			# monitor keyboard
 			self.handleKey(event)
 		
