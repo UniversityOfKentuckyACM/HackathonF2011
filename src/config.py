@@ -9,7 +9,8 @@ FRAME_RATE = 60
 
 GAME_TITLE = "Hackathon!"
 
-DIRECTION_KEYS = [K_UP, K_DOWN, K_LEFT, K_RIGHT]
+# up, down, left right
+DIRECTION_KEYS = [K_W, K_S, K_A, K_D]
 
 GAME_IMAGES = "images"
 GAME_SOUNDS = "sounds"
