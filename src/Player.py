@@ -1,4 +1,3 @@
-
 import Actor
 import util
 
@@ -48,4 +47,3 @@ class Player(Actor.Actor):
 	# TODO
 	def update(self):
 		super(Player,self).update()
-
