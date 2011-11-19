@@ -15,6 +15,57 @@ shield/optional slot?
 A-La zelda style, top level world with seperate sub dugeons
 
 Major Questions:
-Overall Art design
-Story
+	Overall Art design
+	Story
 
+Level Design:
+	32 x 24 tiles
+		4 L,R reserved for HUD = 28 x 24
+
+	File Format -> tile prop
+
+	World:
+		World -> 20 x 20 (N,S,E,W)
+
+		{
+		size x
+		size y
+		
+		<name> <n exit> <s exit> <ER...> //eg <G11> <_> <G12> <ER....>
+		}
+	Map:
+		{
+		name
+		<size> // 28,24
+
+		<at> // y1,x1 y1,x2 ...
+		<under>
+
+		<graphic>
+		//scmline,y1:xi...xn,y2:xi...xn
+		}
+
+		
+		{
+		name
+		<size> // 28,24
+		[RSC]
+		. -> No
+
+		{any ascii} #, ..../fname
+
+		[AT]
+		.
+		.
+		.
+		D,D,D,D,D
+		[UNDER]
+		.
+		.
+		.
+		[ENTITY]
+		.
+		.
+		.
+		.
+		}
