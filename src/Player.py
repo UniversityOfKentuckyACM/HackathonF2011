@@ -1,3 +1,4 @@
+import math
 import Actor
 import util
 
@@ -28,21 +29,57 @@ class Player(Actor.Actor):
 		self.setImage(self.images[self.direction])
 		self.setPos(START_X, START_Y)
 	
+	# Orient player with mouse
+	def orient(self, mousePos):
+		loc = mousePos - Vector2(self.getPos())
+		angle = math.atan2(loc[1],loc[0])
+		mag = math.fabs(angle)
+		
+		# if we're facing to the right
+		if mag < math.pi / 4:
+			self.setDir(3)
+		# move left
+		elif mag > 3*math.pi / 4:
+			self.setDir(2)
+		# either up or down
+		else:
+			if angle < 0:
+				self.setDir(0)
+			else:
+				self.setDir(1)
+	
 	def setDir(self, newDir):
 		self.direction = newDir
-		self.setImage(self.images[self.direction])
+		self.image = self.images[self.direction]
 	
 	def move(self, m):
+		'''
+			Press a key and add to our velocity vector
+		'''
 		if m == -1:
 			self.vel = Vector2(0,0)
 		elif m == 0:
-			self.vel = Vector2(0,-1) * PLAYER_SPEED
+			self.vel += Vector2(0,-1) * PLAYER_SPEED
 		elif m == 1:
-			self.vel = Vector2(0,1) * PLAYER_SPEED
+			self.vel += Vector2(0,1) * PLAYER_SPEED
 		elif m == 2:
-			self.vel = Vector2(-1,0) * PLAYER_SPEED
+			self.vel += Vector2(-1,0) * PLAYER_SPEED
 		elif m == 3:
-			self.vel = Vector2(1,0) * PLAYER_SPEED
+			self.vel += Vector2(1,0) * PLAYER_SPEED
+	
+	def unMove(self, m):
+		'''
+			Once a key is released, remove that from velocity vector.
+		'''
+		if m == 0:
+			self.vel -= Vector2(0,-1) * PLAYER_SPEED
+		elif m == 1:
+			self.vel -= Vector2(0,1) * PLAYER_SPEED
+		elif m == 2:
+			self.vel -= Vector2(-1,0) * PLAYER_SPEED
+		elif m == 3:
+			self.vel -= Vector2(1,0) * PLAYER_SPEED
+	
 	
 	# TODO
 	def update(self):

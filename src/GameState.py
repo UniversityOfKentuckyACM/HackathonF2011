@@ -4,10 +4,12 @@ from pygame.locals import *
 
 import util
 import sys
+import math
 
 from State import State
 from Actor import Actor
 from Player import Player
+from Vector2 import Vector2
 
 from config import *
 
@@ -40,14 +42,16 @@ class GameState(State):
 		GameState.playerGroup.update()
 	
 	def handleEvent(self):
+		# handle mouse
+		mousePos = Vector2(pygame.mouse.get_pos())
+		self.player.orient(mousePos)
+			
 		# For each event that occurs this frame
 		for event in pygame.event.get():
 			# If user exits the window
 			if event.type == QUIT:
 				sys.exit(0)
 
-			# handle mouse
-			
 			# monitor keyboard
 			self.handleKey(event)
 		
@@ -59,18 +63,24 @@ class GameState(State):
 			# exit game
 			if event.key == K_ESCAPE:
 				sys.exit(1)
-			elif event.key == MOVEMENT_KEYS[0]:
+			if event.key == MOVEMENT_KEYS[0]:
 				self.player.move(0)
-			elif event.key == MOVEMENT_KEYS[1]:
+			if event.key == MOVEMENT_KEYS[1]:
 				self.player.move(1)
-			elif event.key == MOVEMENT_KEYS[2]:
+			if event.key == MOVEMENT_KEYS[2]:
 				self.player.move(2)
-			elif event.key == MOVEMENT_KEYS[3]:
+			if event.key == MOVEMENT_KEYS[3]:
 				self.player.move(3)
 
 		elif event.type == pygame.KEYUP:
-			if event.key in MOVEMENT_KEYS:
-				self.player.move(-1)
+			if event.key == MOVEMENT_KEYS[0]:
+				self.player.unMove(0)
+			if event.key == MOVEMENT_KEYS[1]:
+				self.player.unMove(1)
+			if event.key == MOVEMENT_KEYS[2]:
+				self.player.unMove(2)
+			if event.key == MOVEMENT_KEYS[3]:
+				self.player.unMove(3)
 			
 	def checkCollisions(self):
 		pass
