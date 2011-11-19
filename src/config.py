@@ -18,12 +18,11 @@ GAME_SOUNDS = "sounds"
 
 START_X = WIDTH / 2
 START_Y = HEIGHT / 2
-#PLAYER_SPEED = 4
-#PLAYER_IMAGE = "ship.png"
+PLAYER_SPEED = 4
+PLAYER_IMAGES = ["characterUp.png", "characterDown.png", "characterLeft.png", "characterRight.png"]
 
 #SUB_IMAGE = "sub.png"
 #TORPEDO_IMAGE = "ship_fire.png"
-
 #TORPEDO_VEL = (0,3)
 #SUB_VEL = (2,0)
 
