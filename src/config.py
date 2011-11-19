@@ -10,7 +10,7 @@ FRAME_RATE = 60
 GAME_TITLE = "Hackathon!"
 
 # up, down, left right
-DIRECTION_KEYS = [K_W, K_S, K_A, K_D]
+DIRECTION_KEYS = [K_w, K_s, K_a, K_d]
 
 GAME_IMAGES = "images"
 GAME_SOUNDS = "sounds"
@@ -21,6 +21,9 @@ START_X = WIDTH / 2
 START_Y = HEIGHT / 2
 PLAYER_SPEED = 4
 PLAYER_IMAGES = ["characterUp.png", "characterDown.png", "characterLeft.png", "characterRight.png"]
+
+START_MENU = "START"
+PLAY = "PLAY"
 
 #SUB_IMAGE = "sub.png"
 #TORPEDO_IMAGE = "ship_fire.png"
