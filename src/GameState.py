@@ -28,7 +28,7 @@ class GameState(State):
 		State.__init__(self,main)
 
 		self.loadPlayer()
-		self.background = TerrainLayer()
+		self.background = TerrainLayer("d1_0_0.map")
 
 	def __del__(self):
 		# transition to another state
