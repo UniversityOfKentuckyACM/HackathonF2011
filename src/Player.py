@@ -53,16 +53,33 @@ class Player(Actor.Actor):
 		self.image = self.images[self.direction]
 	
 	def move(self, m):
+		'''
+			Press a key and add to our velocity vector
+		'''
 		if m == -1:
 			self.vel = Vector2(0,0)
 		elif m == 0:
-			self.vel = Vector2(0,-1) * PLAYER_SPEED
+			self.vel += Vector2(0,-1) * PLAYER_SPEED
 		elif m == 1:
-			self.vel = Vector2(0,1) * PLAYER_SPEED
+			self.vel += Vector2(0,1) * PLAYER_SPEED
 		elif m == 2:
-			self.vel = Vector2(-1,0) * PLAYER_SPEED
+			self.vel += Vector2(-1,0) * PLAYER_SPEED
 		elif m == 3:
-			self.vel = Vector2(1,0) * PLAYER_SPEED
+			self.vel += Vector2(1,0) * PLAYER_SPEED
+	
+	def unMove(self, m):
+		'''
+			Once a key is released, remove that from velocity vector.
+		'''
+		if m == 0:
+			self.vel -= Vector2(0,-1) * PLAYER_SPEED
+		elif m == 1:
+			self.vel -= Vector2(0,1) * PLAYER_SPEED
+		elif m == 2:
+			self.vel -= Vector2(-1,0) * PLAYER_SPEED
+		elif m == 3:
+			self.vel -= Vector2(1,0) * PLAYER_SPEED
+	
 	
 	# TODO
 	def update(self):
