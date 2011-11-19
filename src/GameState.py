@@ -20,12 +20,15 @@ class GameState(State):
 	
 	bgGroup = pygame.sprite.OrderedUpdates()
 	playerGroup = pygame.sprite.RenderPlain()
+	background = 0
+	
 
 	def __init__(self, main):
 		# transition from another state
 		State.__init__(self,main)
 
 		self.loadPlayer()
+		self.background = TerrainLayer()
 
 	def __del__(self):
 		# transition to another state
@@ -86,10 +89,9 @@ class GameState(State):
 		pass
 		
 	def draw(self):
-		#make the surface, and draw it.
-		background = TerrainLayer()
-		self.main.screen.blit(background, background.get_rect())
-
+		#draw background
+		self.main.screen.blit(self.background, self.background.get_rect())
+		
 		# draw player	
 		GameState.playerGroup.draw(self.main.screen)
 		
