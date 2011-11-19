@@ -1,11 +1,11 @@
 The top left portion on quadrent I
-28,24
+
 [RSC]
-G, ground.png
-T, tree.png
-W, wall.png
-O, <OCEAN.png>
-S, <SAND.png>
+G ground.png
+T tree.png
+W wall.png
+O <OCEAN.png>
+S <SAND.png>
 
 
 [AT]

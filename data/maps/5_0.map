@@ -1,8 +1,7 @@
 The (5,0) position in the map grid
-28,24
-[RSC]
-O, <OCEAN.png>
 
+[RSC]
+O <OCEAN.png>
 
 [AT]
 ............................
@@ -40,6 +39,7 @@ O, <OCEAN.png>
 ............................
 ............................
 ............................
+
 [UNDER]
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
@@ -67,4 +67,5 @@ OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
+
 [ENTITY]
