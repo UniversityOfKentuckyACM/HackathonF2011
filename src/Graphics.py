@@ -33,34 +33,44 @@ class Graphics():
 		self.bgGroup = pygame.sprite.OrderedUpdates()
 		self.playerGroup = pygame.sprite.RenderPlain()
 
-	def loadBackground(self, imagefile):
-		# Create background object
-		self.bg = Actor(imagefile)
-		self.bgGroup.add(self.bg)
-	
+	# TODO
 	def loadPlayer(self, imagefile):
 		self.player = Actor(imagefile, -1)
 		self.playerGroup.add(self.player)
 		return self.player
+	
+	def startUpdate(self):
+		'''
+			Update information on start menu
+		'''
+		pass
+	
+	def drawStartMenuScreen(self):
+		'''
+			Draw start menu
+		'''
+		pass
 
-	def update(self):
+	def playUpdate(self):
+		''' 
+			Update play screen
+		'''
 		self.bgGroup.update()
 		self.playerGroup.update()
 
 		self.checkCollisions()
-	
-	def checkCollisions(self):
-		# For each collision between two groups, kill them both.
-		# the 1,1 tells pygame to kill both. If for instance we wanted to only kill the torpedo 1,0 would suffice.
-		#for hit in pygame.sprite.groupcollide(self.torpedoGroup, self.subGroup, 1, 1):
 
-		pass
-
-	def drawScreen(self):
+	def drawPlayScreen(self):
 		# draw background
 		self.bgGroup.draw(self.screen)
 		# draw player	
 		self.playerGroup.draw(self.screen)
 
 		pygame.display.flip()
+
+	def checkCollisions(self):
+		# For each collision between two groups, kill them both.
+		# the 1,1 tells pygame to kill both. If for instance we wanted to only kill the torpedo 1,0 would suffice.
+		#for hit in pygame.sprite.groupcollide(self.torpedoGroup, self.subGroup, 1, 1):
+		pass
 

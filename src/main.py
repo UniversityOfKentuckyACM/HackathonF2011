@@ -26,6 +26,9 @@ class Game():
 		# game clock
 		self.clock = pygame.time.Clock()
 
+		# game state
+		self.state = PLAY
+
 		# Loop until exit
 		self.gameLoop()
 	
@@ -35,16 +38,40 @@ class Game():
 			# ensure we're running at a stable FPS
 			self.clock.tick(FRAME_RATE)
 
-			# handle user input
-			self.handle_input()
+			# State machine
+			if self.state == START_MENU:
+				self.startMenu()
 
-			# update positions, handle collisions, etc
-			self.g.update()
+			elif self.state == PLAY:
+				self.playFrame()
 
-			# draw
-			self.g.drawScreen()
+	def startMenuFrame(self):
+		# Grab input from start menu
+		self.startMenuInput()
 
-	def handle_input(self):
+		# Update menu choice
+		self.g.startUpdate()
+
+		# draw start menu
+		self.g.drawStartMenuScreen()
+	
+	def playFrame(self):
+		# Move character around, etc
+		self.handlePlayInput()
+
+		# Update all player, AI, etc
+		self.g.playUpdate()
+
+		# Draw play screen
+		self.g.drawPlayScreen()
+	
+	def startMenuInput(self):
+		'''
+			Handle input concerning start menu screen
+		'''
+		pass
+
+	def handlePlayInput(self):
 		'''
 			Handle all input from user. This includes keypresses, mouse clicks,
 			exiting, etc.
@@ -58,36 +85,20 @@ class Game():
 			# handle mouse
 			
 			# monitor keyboard
-			self.handle_keys(event)
+			self.handlePlayKeys(event)
 
 	
-	def handle_keys(self, event):
+	def handlePlayKeys(self, event):
 		'''
 			Handle input from user keyboard
 		'''
 		if event.type == pygame.KEYDOWN:
+			# exit game
 			if event.key == K_ESCAPE:
 				sys.exit(1)
-			return
-			# move left
-			if event.key == K_LEFT:
-				self.player.setVel(Vector2(-1,0) * PLAYER_SPEED)
-			# move right
-			elif event.key == K_RIGHT:
-				self.player.setVel(Vector2(1,0) * PLAYER_SPEED)
-
-			# fire
-			elif event.key == K_SPACE:
-				self.fireTorpedo()
-
-			# exit game
-			elif event.key == K_ESCAPE:
-				sys.exit(0)
 
 		elif event.type == pygame.KEYUP:
-			# if we released either the left or right arrow key, stop moving
-			if event.key == K_LEFT or event.key == K_RIGHT:
-				self.player.setVel(Vector2(0,0))
+			pass
 
 if __name__ == '__main__':
 	g = Game()
