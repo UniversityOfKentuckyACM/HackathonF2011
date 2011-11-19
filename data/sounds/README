@@ -1,4 +1,16 @@
 Add sound files for the game here.
 
-Title Menu Song: godspeed.midi
+Songs:
+
+	Title Menu Song: godspeed.midi
+	Credits Song: gameover.midi
+	Ambient (Background) World Music: worldAmbient.mp3
+	Ambient (Background) Dungeon Music: dungeonAmbient.mp3
+	On Fighting Boss: bossMusic.mp3
+
+Sounds:
+
+	On Player Enters Dungeon: dungeonEntered.mp3
+	On Player Death: playerDiedSound.mp3
+
 
