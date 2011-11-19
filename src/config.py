@@ -6,6 +6,8 @@ WIDTH = 1024
 HEIGHT = 768
 IS_FULLSCREEN = False
 FRAME_RATE = 60
+TILEX = 32
+TILEY = 32
 
 GAME_TITLE = "Hackathon!"
 
@@ -20,9 +22,9 @@ GAME_MAPS = "maps"
 
 START_X = WIDTH / 2
 START_Y = HEIGHT / 2
-PLAYER_SPEED = 4
+PLAYER_SPEED = 8
 # up, down, left, right
-PLAYER_IMAGES = ["characterDown1.png", "characterDown.png", "characterLeft.png", "characterRight.png"]
+PLAYER_IMAGES = ["characterUp1.png", "characterDown1.png", "characterLeft1.png", "characterRight1.png"]
 PLAYER_UP = PLAYER_IMAGES[0]
 PLAYER_DOWN = PLAYER_IMAGES[1]
 PLAYER_LEFT = PLAYER_IMAGES[2]

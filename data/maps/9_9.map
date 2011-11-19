@@ -1,0 +1,57 @@
+9-9
+[RSC]
+% wall.png
+r rubbleDead.png
+D dungeonDoor.png
+T treeDying.png
+G grassDead.png
+
+[AT]
+%%%%%%..%%%%%%%%%%%%%%%%%%%%
+%%%%%%..%%%%%%%%%%%%%%%%%%%%
+%%%%%%..%%%%%%%%%%%%D%%%%%%%
+........%%%%%%%....rr..%%%%%
+........%%%%%%....r..r.%%%%%
+%%%%%%..%%%%%%...T.....%%%%%
+%%%%%%..%%%%%%.........%%%%%
+%%%%%%..%%%%%%.........%%%%%
+%%%%%%..%%%...............%%
+%%%%%%..%%.................%
+%%%%%%..%%.....T.......T...%
+%%%%%%..%%.................%
+%%%%%%..%%.................%
+%%%%%%..%%..T...........T..%
+%%%%%%..%%.................%
+%%%%%%..%%.................%
+%.......%%.................%
+%.......%%.................%
+%..%%%%%%%..T...........T..%
+%..%%%%%%%.................%
+%..........................%
+%..........................%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+[UNDER]
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+
+[ENTITY]
