@@ -1,10 +1,10 @@
 5_8.map
 [RSC]
 G grassDead.png
-M mountain.png
+M rocks.png
 # waterToxic.png
 W wall.png
-R rubble.png
+R rubbleDead.png
 S waterToxicWithStone.png
 T treeDying.png
 [AT]
@@ -17,11 +17,11 @@ MM.........T........WWWWW..T
 MM...T.....TTT..............
 MM...T.....T....TTTTTTTTTT..
 MM...T.....T....TTTTTTTTTT..
-MM...T.....T................
+MM...T.....T.............TTT
 MM...TTTTTTTTTTTTTTTT.......
 MM..................T.......
 MM..................T.......
-MM###############...WWWWWWWW
+MM###############...TTTTTTTT
 MM###############...######..
 MM###############...######..
 MM###############...######..
