@@ -11,6 +11,7 @@ from pygame.locals import *
 from Vector2 import Vector2
 from config import *
 from GameState import GameState
+from TitleState import TitleState
 
 class Game():
 	def __init__(self):
@@ -32,10 +33,14 @@ class Game():
 		self.clock = pygame.time.Clock()
 
 		# game state
-		self.state = GameState(self)
+		self.state = TitleState(self)
+		self.nextState = None
 
 		# Loop until exit
 		self.gameLoop()
+	
+	def changeState(self,state):
+		self.nextState = state
 	
 	def gameLoop(self):
 
@@ -44,7 +49,11 @@ class Game():
 			self.clock.tick(FRAME_RATE)
 
 			# State machine
-			self.state.update()
+			if self.nextState != None:
+				self.state = self.nextState
+				self.nextState = None
+			else:
+				self.state.update()
 
 if __name__ == '__main__':
 	g = Game()
