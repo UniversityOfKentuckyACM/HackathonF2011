@@ -1,8 +1,8 @@
-55.map
+5_5.map
 [RSC]
-G grass.png
+G grassDead.png
 M mountain.png
-# ocean.png
+# waterToxic.png
 [AT]
 MMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMM

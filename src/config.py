@@ -6,6 +6,8 @@ WIDTH = 1024
 HEIGHT = 768
 IS_FULLSCREEN = False
 FRAME_RATE = 60
+TILEX = 32
+TILEY = 32
 
 GAME_TITLE = "Hackathon!"
 
@@ -14,6 +16,7 @@ MOVEMENT_KEYS = [K_w, K_s, K_a, K_d]
 
 GAME_IMAGES = "images"
 GAME_SOUNDS = "sounds"
+GAME_MAPS = "maps"
 
 #BACKGROUND_IMAGE = "sea.png"
 

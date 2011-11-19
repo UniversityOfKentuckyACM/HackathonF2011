@@ -10,7 +10,7 @@ from State import State
 from Actor import Actor
 from Player import Player
 from Vector2 import Vector2
-
+from TerrainLayer import TerrainLayer
 from config import *
 
 class GameState(State):
@@ -86,10 +86,9 @@ class GameState(State):
 		pass
 		
 	def draw(self):
-		self.main.screen.fill((52,183,183))
-
-		# draw background
-		GameState.bgGroup.draw(self.main.screen)
+		#make the surface, and draw it.
+		background = TerrainLayer()
+		self.main.screen.blit(background, background.get_rect())
 
 		# draw player	
 		GameState.playerGroup.draw(self.main.screen)
