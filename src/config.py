@@ -21,7 +21,7 @@ START_X = WIDTH / 2
 START_Y = HEIGHT / 2
 PLAYER_SPEED = 4
 # up, down, left, right
-PLAYER_IMAGES = ["characterUp.png", "characterDown.png", "characterLeft.png", "characterRight.png"]
+PLAYER_IMAGES = ["characterDown1.png", "characterDown.png", "characterLeft.png", "characterRight.png"]
 PLAYER_UP = PLAYER_IMAGES[0]
 PLAYER_DOWN = PLAYER_IMAGES[1]
 PLAYER_LEFT = PLAYER_IMAGES[2]
