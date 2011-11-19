@@ -37,6 +37,7 @@ class GameState(State):
 		# transition from another state
 		State.__init__(self,main)
 		self.loadPlayer()
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 		self.background = TerrainLayer()
 =======
@@ -52,6 +53,9 @@ class GameState(State):
 			self.hudSlot[i].setPos(115 + i*115, HEIGHT-100)
 			self.guiGroup.add(self.hudSlot[i])
 >>>>>>> Stashed changes
+=======
+		self.background = TerrainLayer("d1_0_0.map")
+>>>>>>> 25f38df1656e6eab72477197eece0a3358655bf0
 
 	def __del__(self):
 		# transition to another state
