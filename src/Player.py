@@ -1,4 +1,5 @@
 import math
+import pygame.sprite
 import Actor
 import util
 
@@ -29,6 +30,16 @@ class Player(Actor.Actor):
 		self.setImage(self.images[self.direction])
 		self.setPos(START_X, START_Y)
 
+		# load sword
+		self.swordLeft        = pygame.sprite.Sprite()
+		self.swordLeft.image,self.swordLeft.rect  = util.loadImage("swordSwingLeft.png")
+		self.swordUp          = pygame.sprite.Sprite()
+		self.swordUp.image,self.swordUp.rect    = util.loadImage("swordSwingUp.png")
+		self.swordRight       = pygame.sprite.Sprite()
+		self.swordRight.image,self.swordRight.rect = util.loadImage("swordSwingRight.png")
+		self.swordDown        = pygame.sprite.Sprite()
+		self.swordDown.image,self.swordDown.rect  = util.loadImage("swordSwingDown.png")
+	
 		self.gameState = gameState
 	
 	# Orient player with mouse
@@ -82,15 +93,24 @@ class Player(Actor.Actor):
 		elif m == 3:
 			self.vel -= Vector2(1,0) * PLAYER_SPEED
 	
-	# To do
+	# TODO: FIX THIS
 	def swingSword(self):
 		'''
 			When mouse is pressed, sword is pushed out
 		'''
-		
+		if self.direction == 0:
+		 	self.swordUp.rect.bottomleft = self.rect.topleft
+			self.swordUp.add(self.gameState.playerGroup)
+		elif self.direction == 1:
+		 	self.swordDown.rect.topleft = self.rect.bottomleft
+			self.swordDown.add(self.gameState.playerGroup)
+		elif self.direction == 2:
+		 	self.swordLeft.rect.topright = self.rect.topleft
+			self.swordLeft.add(self.gameState.playerGroup)
+		elif self.direction == 3:
+		 	self.swordRight.rect.topleft = self.rect.topright
+			self.swordRight.add(self.gameState.playerGroup)
 	
-	
-	# TODO
 	def update(self):
 		super(Player,self).update()
 

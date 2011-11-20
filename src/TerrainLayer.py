@@ -35,7 +35,8 @@ class TerrainLayer(pygame.Surface):
 		#blit the tiles...
 		for y in range(HEIGHT/TILEY):
 			for x in range(0, (WIDTH/TILEX)-4):
-				self.blit(imagemap[thismap.belowLayer[y][x]], ((x+2)*TILEX, y*TILEY))
+				if not thismap.belowLayer[y][x] == '.':
+					self.blit(imagemap[thismap.belowLayer[y][x]], ((x+2)*TILEX, y*TILEY))
 
 		#load sprites for at layer
 		self.atGroup = pygame.sprite.RenderPlain()

@@ -14,7 +14,7 @@
 5_6.map 5_5.map 5_7.map none 6_6.map
 5_7.map 5_6.map 5_8.map none 6_7.map
 5_8.map 5_7.map 5_9.map 4_8.map 6_8.map
-5_9.map 5_8.map none none 6_9.map
+5_9.map 5_8.map none 6_9.map none
 6_5.map none 6_6.map 7_5.map 5_5.map
 6_6.map 6_5.map 6_7.map 7_6.map 5_6.map
 6_7.map 6_6.map 6_8.map none 5_7.map

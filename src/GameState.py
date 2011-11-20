@@ -43,9 +43,9 @@ class GameState(State):
 		self.hudHearts = []
 		self.hudHeartsHalf = Actor(IMG_HEART2,-1)
 		self.hudSlot = [None]*3
-		self.wl = WorldLoader('test.world')	
-		self.background = TerrainLayer("d1_0_1.map")
-		self.currentMap = "d1_0_1.map"
+		self.wl = WorldLoader('new.world')	
+		self.background = TerrainLayer("0_0.map")
+		self.currentMap = "0_0.map"
 		for i in range(0,3):
 			self.hudSlot[i] = Actor(IMG_SLOT,-1)
 			self.hudSlot[i].setPos(50,120+i*120)
@@ -155,8 +155,8 @@ class GameState(State):
 			
 	def checkCollisions(self):
 		# Check for atLayer collisions 
-		for hits in pygame.sprite.spritecollide(self.player, self.background.atGroup, 0):
-			pass
+		for hit in pygame.sprite.spritecollide(self.player, self.background.atGroup, 0):
+			self.player.collideWall(hit)
 
 	def nextMap(self, direction, pos):
 		# print "moving to: " + direction + " via: " + str(pos)

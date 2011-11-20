@@ -1,11 +1,9 @@
 The (4,0) position in the world map
-
 [RSC]
 G ground.png
 O water.png
 S sand.png
 s <HALFSAND.png>
-
 [AT]
 .......OOOOOOOOOOOOOOOOOOOOO
 .......OOOOOOOOOOOOOOOOOOOOO
@@ -31,7 +29,6 @@ s <HALFSAND.png>
 .......OOOOOOOOOOOOOOOOOOOOO
 .......OOOOOOOOOOOOOOOOOOOOO
 .......OOOOOOOOOOOOOOOOOOOOO
-
 [UNDER]
 GGGGGSSS....................
 GGGGGSSS....................
@@ -56,5 +53,5 @@ GGGGGSSS....................
 GGGGGSSS....................
 GGGGGSSS....................
 GGGGGSSS....................
-
+GGGGGSSS....................
 [ENTITY]
