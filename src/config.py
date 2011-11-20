@@ -14,6 +14,8 @@ GAME_TITLE = "Hackathon!"
 # up, down, left right
 MOVEMENT_KEYS = [K_w, K_s, K_a, K_d]
 
+MAGIC_ATTACK_KEY = K_SPACE
+
 GAME_IMAGES = "images"
 GAME_SOUNDS = "sounds"
 GAME_MAPS = "maps"
