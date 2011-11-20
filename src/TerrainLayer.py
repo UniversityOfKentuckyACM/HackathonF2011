@@ -44,6 +44,7 @@ class TerrainLayer(pygame.Surface):
 				if not thismap.atLayer[y][x] == '.':
 					sprite = pygame.sprite.Sprite(self.atGroup)
 					sprite.image, sprite.rect = util.loadImage(thismap.aliases[thismap.atLayer[y][x]])
+					sprite.rect.topleft = ((x+2)*TILEX, y*TILEY)
 
 	def drawTerrain(self,screen):
 		screen.blit(self,self.get_rect())
