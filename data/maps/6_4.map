@@ -1,12 +1,12 @@
 Tile6_4
 [RSC]
-W rubble.png
-M rocksBrowns.png
+r rubble.png
+M rockyMountain.png
 G grass.png
 [AT]
-........W...............W...
-........WW..............WW..
-.........WWWWWW.WWWW.WW..W..
+........r...............r...
+........rr..............rr..
+.........rrrrrr.rrrr.rr..r..
 ............................
 ............................
 ............................
