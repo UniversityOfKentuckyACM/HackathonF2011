@@ -3,6 +3,7 @@ import pygame
 import pygame.gfxdraw
 import util
 import sys
+import os
 from Actor import Actor
 from pygame.locals import *
 from GameState import GameState
@@ -33,6 +34,13 @@ class TitleState(State):
 		TitleState.titleGroup.add(self.titleScreen)
 		TitleState.btnStartGroup.add(self.btnStart)
 		
+		pygame.mixer.init()
+		filename = "godspeed.mid"
+		path = os.path.join(util.GAME_SOUNDS, filename)
+		path = util.filepath(path)
+		pygame.mixer.music.load(path)
+		pygame.mixer.music.play()
+
 	def __del__(self):
 		# transition to another state
 		TitleState.titleGroup.empty()
