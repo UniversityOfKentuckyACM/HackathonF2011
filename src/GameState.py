@@ -20,7 +20,6 @@ class GameState(State):
 	
 	bgGroup = pygame.sprite.OrderedUpdates()
 	playerGroup = pygame.sprite.RenderPlain()
-	background = 0
 	
 
 	def __init__(self, main):
@@ -90,8 +89,9 @@ class GameState(State):
 		
 	def draw(self):
 		#draw background
-		self.main.screen.blit(self.background, self.background.get_rect())
-		
+		#self.main.screen.blit(self.background, self.background.get_rect())
+		self.background.drawTerrain(self.main.screen);	
+
 		# draw player	
 		GameState.playerGroup.draw(self.main.screen)
 		
