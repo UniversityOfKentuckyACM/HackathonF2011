@@ -10,8 +10,14 @@ from State import State
 from Actor import Actor
 from Player import Player
 from Vector2 import Vector2
+
 from TerrainLayer import TerrainLayer
 from config import *
+
+IMG_HUD = "hud_bg.png"
+IMG_SLOT = "slot_bg.png"
+IMG_HEART = "hud_health.png"
+IMG_HEART_HALF = "hud_health_half.png"
 
 class GameState(State):
 	'''
@@ -20,15 +26,24 @@ class GameState(State):
 	
 	bgGroup = pygame.sprite.OrderedUpdates()
 	playerGroup = pygame.sprite.RenderPlain()
-	background = 0
-	
+	guiGroup = pygame.sprite.OrderedUpdates()
 
 	def __init__(self, main):
 		# transition from another state
 		State.__init__(self,main)
-
 		self.loadPlayer()
-		self.background = TerrainLayer()
+		self.hud = Actor(IMG_HUD,-1)
+		self.hud.setPos(WIDTH/2,HEIGHT-100)
+		GameState.guiGroup.add(self.hud)
+		self.health = 7
+		self.hudHearts = []
+		self.hudSlot = [None]*3
+		
+		for i in range(0,3):
+			self.hudSlot[i] = Actor(IMG_SLOT,-1)
+			self.hudSlot[i].setPos(115 + i*115, HEIGHT-100)
+			self.guiGroup.add(self.hudSlot[i])
+		self.background = TerrainLayer("d1_0_0.map")
 
 	def __del__(self):
 		# transition to another state
@@ -41,8 +56,32 @@ class GameState(State):
 	def update(self):
 		self.checkCollisions()
 		State.update(self);
-
+		
+		self.updateHud()
+		
+		GameState.guiGroup.update()
 		GameState.playerGroup.update()
+		
+	def updateHud(self):
+		full = self.health/2
+		halve = self.health%2
+		
+		if len(self.hudHearts) != full+halve:
+			while len(self.hudHearts) < full:
+				self.hudHearts.append(Actor(IMG_HEART,-1))
+				GameState.guiGroup.add(self.hudHearts[-1])
+				
+			while len(self.hudHearts) > full:
+				GameState.guiGroup.remove(self.hudHearts.pop())
+			
+			if halve == 1:
+				self.hudHearts.append(Actor("hud_health_half.png",-1))
+				GameState.guiGroup.add(self.hudHearts[-1])
+				
+			for i in range(0,full+halve):
+				self.hudHearts[i].setPos(WIDTH-60-i*60,HEIGHT-50)
+				print i, (WIDTH-60-i*60,HEIGHT-50)
+				
 	
 	def handleEvent(self):
 		# handle mouse
@@ -90,10 +129,14 @@ class GameState(State):
 		
 	def draw(self):
 		#draw background
-		self.main.screen.blit(self.background, self.background.get_rect())
-		
+		#self.main.screen.blit(self.background, self.background.get_rect())
+		self.background.drawTerrain(self.main.screen);	
+
 		# draw player	
 		GameState.playerGroup.draw(self.main.screen)
+		
+		# draw gui
+		GameState.guiGroup.draw(self.main.screen)
 		
 		# flip screen
 		State.draw(self)

@@ -4,7 +4,7 @@ G grassDead.png
 M rocks.png
 # waterToxic.png
 W wall.png
-R rubble.png
+R rubbleDead.png
 T treeDying.png
 [AT]
 MMMMMMMMMM..............MMMM
