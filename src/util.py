@@ -38,7 +38,7 @@ def loadImage(imageFile, colorKey=None):
 		raise SystemExit, message
 	
 	# convert for speed and grab rect for collisions
-	image = image.convert()
+	image = image.convert_alpha()
 	rect = image.get_rect()
 	
 	# handle colorKey
