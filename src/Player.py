@@ -17,10 +17,10 @@ class Player(Actor.Actor):
 		# load all images
 		# up, down, left, right
 		self.images = [0] * 4
-		self.images[0], self.rect = util.loadImage(PLAYER_UP, -1)
-		self.images[1], self.rect = util.loadImage(PLAYER_DOWN, -1)
-		self.images[2], self.rect = util.loadImage(PLAYER_LEFT, -1)
-		self.images[3], self.rect = util.loadImage(PLAYER_RIGHT, -1)
+		self.images[0], self.rect = util.loadImage(PLAYER_IDLE_UP, -1)
+		self.images[1], self.rect = util.loadImage(PLAYER_IDLE_DOWN, -1)
+		self.images[2], self.rect = util.loadImage(PLAYER_IDLE_LEFT, -1)
+		self.images[3], self.rect = util.loadImage(PLAYER_IDLE_RIGHT, -1)
 		
 		# 0 = up, 1 = down, 2 = left, 3 = right
 		self.direction = 0
@@ -79,13 +79,13 @@ class Player(Actor.Actor):
 			self.vel -= Vector2(-1,0) * PLAYER_SPEED
 		elif m == 3:
 			self.vel -= Vector2(1,0) * PLAYER_SPEED
-    
-    # To do
-    def swingSword(self):
-        '''
-            When mouse is pressed, sword is pushed out
-        '''
-        print "sword swung"
+	
+	# To do
+	def swingSword(self):
+		'''
+			When mouse is pressed, sword is pushed out
+		'''
+		print "sword swung"
 	
 	
 	# TODO
