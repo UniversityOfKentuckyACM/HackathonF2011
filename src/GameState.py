@@ -53,6 +53,13 @@ class GameState(State):
 			
 		self.updateHudHealth()
 
+		pygame.mixer.init()
+		filename = "worldAmbient.mp3"
+		path = os.path.join(util.GAME_SOUNDS, filename)
+		path = util.filepath(path)
+		pygame.mixer.music.load(path)
+		pygame.mixer.music.play()
+
 	def __del__(self):
 		# transition to another state
 		pass
