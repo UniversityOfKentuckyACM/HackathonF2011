@@ -129,21 +129,29 @@ class GameState(State):
 		pass
 	
 	def nextMap(self, direction, pos):
-		print "moving to: " + direction + " via: " + str(pos)
-		map = ""
-		
+		# print "moving to: " + direction + " via: " + str(pos)
+		mmap = ""
+
 		if direction == 'up':
-			map = self.wl.north[self.currentMap]
+			mmap = self.wl.north[self.currentMap]
+			# position player at bottom minus almost half a tile
+			if mmap is not 'none':
+				self.player.setPos(pos[0], HEIGHT-17)
 		elif direction == 'down':
-			map = self.wl.south[self.currentMap]
+			mmap = self.wl.south[self.currentMap]
+			if mmap is not 'none':
+				self.player.setPos(pos[0], 17)
 		elif direction == 'right':
-			map = self.wl.east[self.currentMap]
+			mmap = self.wl.east[self.currentMap]
+			if mmap is not 'none':
+				self.player.setPos(64+17, pos[1]) # just not touching the hud
 		elif direction == 'left':
-			map = self.wl.west[self.currentMap]
-		if not map == 'none':
-			self.currentMap = map
-			self.background = TerrainLayer(map)
-		pass
+			mmap = self.wl.west[self.currentMap]
+			if mmap is not 'none':
+				self.player.setPos(WIDTH-(64+17), pos[1])
+		if not mmap == 'none':
+			self.currentMap = mmap
+			self.background = TerrainLayer(mmap)
 		
 	def draw(self):
 		#draw background
