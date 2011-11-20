@@ -4,12 +4,13 @@ G grassDead.png
 # wall.png
 @ impassableRockDead.png
 % snowyMountain.png
-T treeDying.png
+Y treeDyingTop.png
+T treeDyingBottom.png
 
 [AT]
 @%%.............%%@@@@@@####
 @%%..............%%@@@@@@###
-@%%..............%%@@@@@@@##
+@%%.........Y....%%@@@@@@@##
 @%%.........T.....%%@@@@@@##
 @%%...............%%@@@@@@##
 @%%...............%@@@@@@@##

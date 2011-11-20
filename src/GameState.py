@@ -124,6 +124,12 @@ class GameState(State):
 				self.player.unMove(2)
 			if event.key == MOVEMENT_KEYS[3]:
 				self.player.unMove(3)
+
+		elif event.type == pygame.MOUSEBUTTONDOWN:
+                        if pygame.mouse.get_pressed()[0]:
+                                self.player.swingSword()
+
+		
 			
 	def checkCollisions(self):
 		pass
