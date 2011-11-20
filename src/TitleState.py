@@ -27,7 +27,7 @@ class TitleState(State):
 		self.btnStart2.setPos(WIDTH/2,HEIGHT-300)
 		
 		self.tick = 0
-		self.tickInterval = 120
+		self.tickInterval = 60
 		self.ready = False
 
 		TitleState.titleGroup.add(self.titleScreen)
@@ -65,7 +65,7 @@ class TitleState(State):
 				if event.key == K_RETURN:					
 					self.ready = True
 					self.tick = 0
-					self.tickInterval = 30
+					self.tickInterval = 60
 		
 	def draw(self):
 		# draw group stuff
