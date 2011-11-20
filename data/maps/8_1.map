@@ -1,5 +1,4 @@
 The (8,1) position in the map grid
-
 [RSC]
 O water.png
 S sand.png
@@ -8,7 +7,6 @@ G grass.png
 M rockyMountain.png
 t treeTop.png
 b treeBottom.png
-
 [AT]
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 .............OOOOOOOOOOOOOOO
@@ -34,7 +32,6 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMM
 ....MMMMMMMMMMMMMMMMMMMMMMMM
 ......MMMMMMMMMMMMMMMMMMMMMM
 .......MMMMMMMMMMMMMMMMMMMMM
-
 [UNDER]
 ............................
 SSSSSSSSSSSSS...............
@@ -60,5 +57,4 @@ GG..........................
 GGGG........................
 GGGGGG......................
 GGGGGGG.....................
-
 [ENTITY]

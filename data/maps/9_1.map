@@ -1,17 +1,12 @@
 The (9,1) position in the map grid
-
 [RSC]
 O water.png
 S sand.png
 B waterWithStone.png
 G grass.png
-<<<<<<< HEAD
 M rockMountains.png
-=======
 t treeTop.png
 b treeBottom.png
-
->>>>>>> b6ccdef5343e5b17d9128ad2c0c0b99094e04196
 [AT]
 OO..OOOOOOOOOOOOOOOOOOOOOOOO
 OO..OOOOOOOOOOOOOOOOOOOOOOOO
@@ -37,7 +32,6 @@ MMMMMMMMMMMMM....t..OOOOOOOO
 MMMMMMMMMMMMMM...b...OOOOOOO
 MMMMMMMMMMMMMM.......OOOOOOO
 MMMMMMMMMMMMMM.......OOOOOOO
-
 [UNDER]
 ..BB........................
 ..BB........................
@@ -63,6 +57,5 @@ GGGGGGGGGGGGGGSSS...........
 ..............GGG.SSS.......
 ..............GGGGSSS.......
 ..............GGGGSSS.......
-
 [ENTITY]
 skeleton skeletonDown.png 256 256

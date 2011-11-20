@@ -65,6 +65,13 @@ class Player(Actor.Actor):
 		self.direction = newDir
 		self.image = self.images[self.direction]
 	
+	def collideWall(self, wall):
+		# collide on the top
+		if self.rect.top < wall.rect.bottom and self.rect.bottom > wall.rect.top:
+			pass
+			#self.vel[1] = 0
+			#self.rect.top = wall.rect.bottom + 1
+	
 	def move(self, m):
 		'''
 			Press a key and add to our velocity vector
