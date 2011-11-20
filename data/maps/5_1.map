@@ -1,11 +1,9 @@
 The (5,1) position in the map grid
-
 [RSC]
 O water.png
 S sand.png
 B waterWithStone.png
 G grass.png
-
 [AT]
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
@@ -31,7 +29,6 @@ OOOOOOOOOOOOOO..............
 OOOOOOOOOOOO................
 OOOOOOOOOOO.................
 OOOOOOOOOO..................
-
 [UNDER]
 ............................
 ............................
@@ -57,5 +54,4 @@ BBBBBBBBBBBBBBBBBBBB........
 ............SSSGGGGGGGGGGGGG
 ...........SSSGGGGGGGGGGGGGG
 ..........SSSGGGGGGGGGGGGGGG
-
 [ENTITY]

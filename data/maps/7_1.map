@@ -1,5 +1,4 @@
 The (7,1) position in the map grid
-
 [RSC]
 O water.png
 S sand.png
@@ -7,7 +6,6 @@ B waterWithStone.png
 G grass.png
 t treeTop.png
 b treeBottom.png
-
 [AT]
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOO..............
@@ -33,7 +31,6 @@ OOOOOOOOOOOOO........t......
 OOOOOOOOOOOOOO.......b......
 OOOOOOOOOOOOOOO.............
 OOOOOOOOOOOOOOOO............
-
 [UNDER]
 ............................
 ..............SSSSSSSSSSSSSS
@@ -59,7 +56,6 @@ OOOOOOOOOOOOOOOO............
 ..............SSSGGGG.GGGGGG
 ...............SSSGGGGGGGGGG
 ................SSSGGGGGGGGG
-
 [ENTITY]
 skeleton skeletonDown.png 608 320
 skeleton skeletonDown.png 640 352
