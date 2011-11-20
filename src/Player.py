@@ -34,11 +34,11 @@ class Player(Actor.Actor):
 		self.swordLeft        = pygame.sprite.Sprite()
 		self.swordLeft.image,self.swordLeft.rect  = util.loadImage("swordSwingLeft.png")
 		self.swordUp          = pygame.sprite.Sprite()
-		self.swordUp.image,self.swordLeft.rect    = util.loadImage("swordSwingUp.png")
+		self.swordUp.image,self.swordUp.rect    = util.loadImage("swordSwingUp.png")
 		self.swordRight       = pygame.sprite.Sprite()
-		self.swordRight.image,self.swordLeft.rect = util.loadImage("swordSwingRight.png")
+		self.swordRight.image,self.swordRight.rect = util.loadImage("swordSwingRight.png")
 		self.swordDown        = pygame.sprite.Sprite()
-		self.swordDown.image,self.swordLeft.rect  = util.loadImage("swordSwingDown.png")
+		self.swordDown.image,self.swordDown.rect  = util.loadImage("swordSwingDown.png")
 	
 		self.gameState = gameState
 	
