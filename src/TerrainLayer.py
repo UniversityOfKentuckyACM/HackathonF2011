@@ -1,5 +1,5 @@
 import pygame
-
+import pygame.sprite
 import util
 import sys
 import math
@@ -38,10 +38,14 @@ class TerrainLayer(pygame.Surface):
 				self.blit(imagemap[thismap.belowLayer[y][x]], ((x+2)*TILEX, y*TILEY))
 
 		#load sprites for at layer
-#		self.atGroup = pygame.sprite.RenderPlain()
-#		for y in range(HEIGHT/TILEY):
-#			for x in range(0, (WIDTH/TILEX)-4):
-#				self.atGroup.add(util.loadImage(imagemap[thismap.belowLayer[y][x]]))
+		self.atGroup = pygame.sprite.RenderPlain()
+		for y in range(HEIGHT/TILEY):
+			for x in range(0, (WIDTH/TILEX)-4):
+				if not thismap.atLayer[y][x] == '.':
+					sprite = pygame.sprite.Sprite(self.atGroup)
+					sprite.image, sprite.rect = util.loadImage(thismap.aliases[thismap.atLayer[y][x]])
+					sprite.rect.topleft = ((x+2)*TILEX, y*TILEY)
 
 	def drawTerrain(self,screen):
 		screen.blit(self,self.get_rect())
+		self.atGroup.draw(screen)

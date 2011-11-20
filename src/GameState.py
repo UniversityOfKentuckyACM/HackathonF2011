@@ -10,7 +10,7 @@ from State import State
 from Actor import Actor
 from Player import Player
 from Vector2 import Vector2
-
+from WorldLoader import WorldLoader
 from TerrainLayer import TerrainLayer
 from config import *
 
@@ -38,12 +38,13 @@ class GameState(State):
 		self.health = 7
 		self.hudHearts = []
 		self.hudSlot = [None]*3
-		
+		self.wl = WorldLoader('test.world')	
 		for i in range(0,3):
 			self.hudSlot[i] = Actor(IMG_SLOT,-1)
 			self.hudSlot[i].setPos(115 + i*115, HEIGHT-100)
 			self.guiGroup.add(self.hudSlot[i])
-		self.background = TerrainLayer("d1_0_0.map")
+		self.background = TerrainLayer("d1_0_1.map")
+		self.currentMap = "d1_0_1.map"
 
 	def __del__(self):
 		# transition to another state
@@ -128,8 +129,20 @@ class GameState(State):
 		pass
 	
 	def nextMap(self, direction, pos):
-		#print "moving to: " + direction + " via: " + str(pos)
-		self.background = TerrainLayer("d1_1_1.map")
+		print "moving to: " + direction + " via: " + str(pos)
+		map = ""
+		
+		if direction == 'up':
+			map = self.wl.north[self.currentMap]
+		elif direction == 'down':
+			map = self.wl.south[self.currentMap]
+		elif direction == 'right':
+			map = self.wl.east[self.currentMap]
+		elif direction == 'left':
+			map = self.wl.west[self.currentMap]
+		if not map == 'none':
+			self.currentMap = map
+			self.background = TerrainLayer(map)
 		pass
 		
 	def draw(self):
