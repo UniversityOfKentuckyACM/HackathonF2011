@@ -33,6 +33,10 @@ class TitleState(State):
 		TitleState.titleGroup.add(self.titleScreen)
 		TitleState.btnStartGroup.add(self.btnStart)
 		
+		pygame.mixer.init()
+		pygame.mixer.music.load("../data/sounds/godspeed.mid")
+		pygame.mixer.music.play()
+		
 	def __del__(self):
 		# transition to another state
 		TitleState.titleGroup.empty()
@@ -50,6 +54,8 @@ class TitleState(State):
 			self.tick = 0
 			if self.ready:
 				self.main.changeState(GameState(self.main))
+				pygame.mixer.music.load("../data/sounds/HeroOh.mp3")
+				pygame.mixer.music.play()
 		
 		TitleState.btnStartGroup.update()
 		TitleState.titleGroup.update()
@@ -62,7 +68,8 @@ class TitleState(State):
 			if event.type == pygame.KEYDOWN:
 				if event.key == K_ESCAPE:
 					sys.exit(0)
-				if event.key == K_RETURN:					
+				if event.key == K_RETURN:
+					pygame.mixer.music.stop()				
 					self.ready = True
 					self.tick = 0
 					self.tickInterval = 60
