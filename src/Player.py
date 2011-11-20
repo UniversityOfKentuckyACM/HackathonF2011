@@ -79,6 +79,13 @@ class Player(Actor.Actor):
 			self.vel -= Vector2(-1,0) * PLAYER_SPEED
 		elif m == 3:
 			self.vel -= Vector2(1,0) * PLAYER_SPEED
+    
+    # To do
+    def swingSword(self):
+        '''
+            When mouse is pressed, sword is pushed out
+        '''
+        print "sword swung"
 	
 	
 	# TODO
