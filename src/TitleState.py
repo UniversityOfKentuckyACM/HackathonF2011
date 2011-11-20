@@ -41,6 +41,7 @@ class TitleState(State):
 		# transition to another state
 		TitleState.titleGroup.empty()
 		TitleState.btnStartGroup.empty()
+		pygame.mixer.music.stop()
 		
 	def update(self):
 		self.tick += 1
@@ -54,8 +55,7 @@ class TitleState(State):
 			self.tick = 0
 			if self.ready:
 				self.main.changeState(GameState(self.main))
-				pygame.mixer.music.load("../data/sounds/HeroOh.mp3")
-				pygame.mixer.music.play()
+				
 		
 		TitleState.btnStartGroup.update()
 		TitleState.titleGroup.update()
@@ -69,10 +69,12 @@ class TitleState(State):
 				if event.key == K_ESCAPE:
 					sys.exit(0)
 				if event.key == K_RETURN:
-					pygame.mixer.music.stop()				
+					pygame.mixer.music.stop()
+					pygame.mixer.music.load("../data/sounds/HeroOh.mp3")
+					pygame.mixer.music.play()				
 					self.ready = True
 					self.tick = 0
-					self.tickInterval = 60
+					self.tickInterval = 120
 		
 	def draw(self):
 		# draw group stuff
