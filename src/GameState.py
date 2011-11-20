@@ -154,8 +154,10 @@ class GameState(State):
 		
 			
 	def checkCollisions(self):
-		pass
-	
+		# Check for atLayer collisions 
+		for hits in pygame.sprite.spritecollide(self.player, self.background.atGroup, 0):
+			pass
+
 	def nextMap(self, direction, pos):
 		# print "moving to: " + direction + " via: " + str(pos)
 		mmap = ""
