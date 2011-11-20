@@ -5,6 +5,7 @@ O water.png
 S sand.png
 B waterWithStone.png
 G grass.png
+M rockMountains.png
 [AT]
 OO..OOOOOOOOOOOOOOOOOOOOOOOO
 OO..OOOOOOOOOOOOOOOOOOOOOOOO
@@ -58,3 +59,4 @@ GGGGGGGGGGGGGGSSS...........
 ..............GGGGSSS.......
 
 [ENTITY]
+skeleton skeletonDown.png 256 256
