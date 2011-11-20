@@ -34,30 +34,34 @@ Level Design:
 		<name> <n exit> <s exit> <ER...> //eg <G11> <_> <G12> <ER....>
 		}
 	Map:
-		{
+		
 		name
 		<size> // 28,24
+		// RSC is "Resources"
+		// Enter in the form <character> image
 		[RSC]
 		. -> No
 
 		{any ascii} #, ..../fname
 
 		[AT]
+		// Defines what is at the level of the player.
+		// defines impassable/passable.
+		// "." means passable.
 		.
 		.
 		.
 		D,D,D,D,D
-		[UNDER]
+		[UNDER] // Defines the background terrain.
 		.
 		.
 		.
-		[ENTITY]
-		.
+		[ENTITY] // Defines items/monsters that should be added.
+		entity-name image-file xpos,ypos
 		.
 		.
 		.
 		}
-
 |==========|==========|==========|==========|==========|
 |          |          |          |          |          |
 |          |          |          |          |          |

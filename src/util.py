@@ -22,6 +22,11 @@ def load(filename, mode='rb'):
 
 ## END LOAD UTILITIES ##
 
+def loadMap(mapFile):
+	path = os.path.join(GAME_MAPS, mapFile)
+	path = filepath(path)
+	return load(path)
+
 # Thank you chimp tutorial!
 def loadImage(imageFile, colorKey=None):
 	path = os.path.join(GAME_IMAGES, imageFile)

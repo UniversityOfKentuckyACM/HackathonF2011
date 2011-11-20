@@ -1,0 +1,61 @@
+The (7,1) position in the map grid
+
+[RSC]
+O <OCEAN.png>
+S <SAND.png>
+B <BRIDGE.png>
+G <GRASS.png>
+
+[AT]
+OOOOOOOOOOOOOOOOOOOOOOOOOOOO
+OOOOOOOOOOOOOO..............
+OOOOOOOOOOOOO...............
+OOOOOOOOOOO.................
+OOOOOOOOO...................
+OOOOOOOO....................
+OOOOOOOOO...................
+OOOOOOOOOO..................
+OOOOOOOOOOO.................
+OOOOOOOOOOOO..............MM
+OOOOOOOOOOOO.............MMM
+OOOOOOOOOOO.............MMMM
+OOOOOOOOOOO.............MMMM
+OOOOOOOOOO.............MMMMM
+OOOOOOOOOO.............MMMMM
+OOOOOOOOOO............MMMMMM
+OOOOOOOOOO............MMMMMM
+OOOOOOOOOO..............MMMM
+OOOOOOOOOOO...............MM
+OOOOOOOOOOOO................
+OOOOOOOOOOOOO...............
+OOOOOOOOOOOOOO..............
+OOOOOOOOOOOOOOO.............
+OOOOOOOOOOOOOOOO............
+
+[UNDER]
+............................
+..............SSSSSSSSSSSSSS
+.............SSSSSSSSSSSSSSS
+...........SSSSSSSSSSSSSSSSS
+.........SSSGGGGGGGGGGGGGGGG
+........SSSGGGGGGGGGGGGGGGGG
+.........SSSGGGGGGGGGGGGGGGG
+..........SSSGGGGGGGGGGGGGGG
+...........SSSGGGGGGGGGGGGGG
+............SSSGGGGGGGGGGGMM
+............SSSGGGGGGGGGGMMM
+...........SSSGGGGGGGGGGMMMM
+...........SSSGGGGGGGGGGMMMM
+..........SSSGGGGGGGGGGMMMMM
+..........SSSGGGGGGGGGGMMMMM
+..........SSSGGGGGGGGGMMMMMM
+..........SSSGGGGGGGGGMMMMMM
+..........SSSGGGGGGGGGGGMMMM
+...........SSSGGGGGGGGGGGGMM
+............SSSGGGGGGGGGGGGG
+.............SSSGGGGGGGGGGGG
+..............SSSGGGGGGGGGGG
+...............SSSGGGGGGGGGG
+................SSSGGGGGGGGG
+
+[ENTITY]
