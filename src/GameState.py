@@ -15,9 +15,10 @@ from TerrainLayer import TerrainLayer
 from config import *
 
 IMG_HUD = "hud_bg.png"
+IMG_HUD2 = "hud_bg2.png"
 IMG_SLOT = "slot_bg.png"
 IMG_HEART = "hud_health.png"
-IMG_HEART_HALF = "hud_health_half.png"
+IMG_HEART2 = "hud_health_half.png"
 
 class GameState(State):
 	'''
@@ -33,18 +34,24 @@ class GameState(State):
 		State.__init__(self,main)
 		self.loadPlayer()
 		self.hud = Actor(IMG_HUD,-1)
-		self.hud.setPos(WIDTH/2,HEIGHT-100)
+		self.hud2 = Actor(IMG_HUD2)
+		self.hud.setPos(32,HEIGHT/2)
+		self.hud2.setPos(WIDTH-32,HEIGHT/2)
 		GameState.guiGroup.add(self.hud)
+		GameState.guiGroup.add(self.hud2)
 		self.health = 7
 		self.hudHearts = []
+		self.hudHeartsHalf = Actor(IMG_HEART2,-1)
 		self.hudSlot = [None]*3
 		self.wl = WorldLoader('test.world')	
-		for i in range(0,3):
-			self.hudSlot[i] = Actor(IMG_SLOT,-1)
-			self.hudSlot[i].setPos(115 + i*115, HEIGHT-100)
-			self.guiGroup.add(self.hudSlot[i])
 		self.background = TerrainLayer("d1_0_1.map")
 		self.currentMap = "d1_0_1.map"
+		for i in range(0,3):
+			self.hudSlot[i] = Actor(IMG_SLOT,-1)
+			self.hudSlot[i].setPos(50,120+i*120)
+			self.guiGroup.add(self.hudSlot[i])
+			
+		self.updateHudHealth()
 
 	def __del__(self):
 		# transition to another state
@@ -58,31 +65,32 @@ class GameState(State):
 		self.checkCollisions()
 		State.update(self);
 		
-		self.updateHud()
-		
 		GameState.guiGroup.update()
 		GameState.playerGroup.update()
 		
-	def updateHud(self):
+	def updateHudHealth(self):
+		if self.health < 1 or self.health > 20:
+			return
+		
 		full = self.health/2
 		halve = self.health%2
 		
-		if len(self.hudHearts) != full+halve:
+		if len(self.hudHearts) != full:
 			while len(self.hudHearts) < full:
 				self.hudHearts.append(Actor(IMG_HEART,-1))
 				GameState.guiGroup.add(self.hudHearts[-1])
 				
 			while len(self.hudHearts) > full:
 				GameState.guiGroup.remove(self.hudHearts.pop())
-			
-			if halve == 1:
-				self.hudHearts.append(Actor("hud_health_half.png",-1))
-				GameState.guiGroup.add(self.hudHearts[-1])
 				
-			for i in range(0,full+halve):
-				self.hudHearts[i].setPos(WIDTH-60-i*60,HEIGHT-50)
-				#print i, (WIDTH-60-i*60,HEIGHT-50)
+			for i in range(0,full):
+				self.hudHearts[i].setPos(WIDTH-25,HEIGHT-50-i*60)
 				
+		if halve == 1:
+			GameState.guiGroup.add(self.hudHeartsHalf)
+			self.hudHeartsHalf.setPos(WIDTH-25, HEIGHT-50-full*60)
+		else:
+			self.hudHeartsHalf.kill()
 	
 	def handleEvent(self):
 		# handle mouse
@@ -114,6 +122,13 @@ class GameState(State):
 				self.player.move(2)
 			if event.key == MOVEMENT_KEYS[3]:
 				self.player.move(3)
+			# testing
+			if event.key == K_DOWN:
+				self.health -= 1
+				self.updateHudHealth()
+			if event.key == K_UP:
+				self.health += 1
+				self.updateHudHealth()
 
 		elif event.type == pygame.KEYUP:
 			if event.key == MOVEMENT_KEYS[0]:

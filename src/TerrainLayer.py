@@ -18,7 +18,7 @@ class TerrainLayer(pygame.Surface):
 		#blit onto that shit.
 		#pygame.Surface.__init__((WIDTH, HEIGHT))
 		super(TerrainLayer,self).__init__((WIDTH,HEIGHT))
-		self.fill([255,0,0])
+		self.fill([0,0,0])
 		
 		thismap = Map.Map(mapname)
 		

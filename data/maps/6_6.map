@@ -5,7 +5,8 @@ M mountain.png
 # water.png
 S waterToxicWithStone.png
 W wall.png
-T treeDying.png
+T treeDyingBottom.png
+Q treeDyingTop.png
 R rubbleDead.png
 [AT]
 MM.......WWWWWWWWWWWWWWWWWWW
@@ -14,7 +15,7 @@ MM..........................
 MM.......W..................
 MM.......W..................
 MM.......W..................
-MM.......W..................
+MM.Q.Q.Q.W..................
 MM.T.T.T.W..................
 MM######.###################
 MM######.###################
@@ -58,9 +59,9 @@ GGGGGGGGGGGGGGGGGGGGGGGGGGGG
 MMMMMMMMMMMMMMMMMMMMMGGGMMMM
 MMMMMMMMMMMMMMMMMMMMMGGGMMMM
 [ENTITY]
-Skel skeleton.png 480 128
-Skel2 skeleton.png 576 128
-Skel3 skeleton.png 672 128
+Skel skeletonDown.png 480 128
+Skel2 skeletonDown.png 576 128
+Skel3 skeletonDown.png 672 128
 
 
 

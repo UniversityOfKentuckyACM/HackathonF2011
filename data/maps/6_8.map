@@ -5,31 +5,32 @@ M rocks.png
 # waterToxic.png
 W wall.png
 R rubbleDead.png
-T treeDying.png
+T treeDyingBottom.png
+Q treeDyingTop.png
 [AT]
-MMMM..T...MM...TT...TT..MMMM
+MMMM..Q...MM...QQ...QQ..MMMM
 ......T...MM...TT...TT..MMMM
-MMMM..T...MM...TT...TT..MMMM
-MMM..TT...TT...TT...TT..MMMM
-MMMMTTT...TT...TT...TT..MMMM
-MMMMTTT...TT...TT...TT..MMMM
-MMMMTT....TT...TT...TT..MMMM
-MMMMMT...TTTT..TTT......MMMM
-MMMMMT...TTTT...TTT.....MMMM
-MMMMMM..TTTTTT...TTT...TMMMM
-MMMMMM...TTT......TT....MMMM
+MMMM..Q...MM...QQ...QQ..MMMM
+MMMMQQQ...QQ...TT...TT..MMMM
+MMMMTTT...TT...QQ...QQ..MMMM
+MMMMQQ....QQ...TT...TT..MMMM
+MMMMTT....TT...QQQ......MMMM
+MMMMMQ...QQQQ..TTT......MMMM
+MMMMMT..QTTTTQ...QQQ...QMMMM
+MMMMMM..TQQQ.T...TTT...TMMMM
+MMMMMM...TTT...........QMMMM
 MMMMMM.................TMMMM
-MMMMMM.......MMMMMMMM...MMMM
+MMMMMM..Q.Q..MMMMMMMM..QMMMM
 MMMMMMMMT.T...MMMMMM...TMMMM
-MMMMMMMMM.MM...MMMM.....MMMM
+MMMMMMMMM.MM...MMMM....QMMMM
 .....MMMM.MMM..........TMMMM
-......MMM.MMMM..........MMMM
+.QQ...MMM.MMMM..........MMMM
 WTT..MMMM.MMMMMM########MMMM
-.TT..MM.....MMMMMM####MMMMMM
-..T..MM......MMMMMMM##MMMMMM
-.....MMT........TMMMMMMMMMMM
-....MMMMT....TT...TMMMMMMMMM
-..MMMMMMT...........TMMMMMMM
+..Q..MM.....MMMMMM####MMMMMM
+..T..MMQ.....MMMMMMM##MMMMMM
+.....MMT.....QQ..MMMMMMMMMMM
+....MMMMQ....TT....MMMMMMMMM
+..MMMMMMT............MMMMMMM
 .MMMMMMMMM..............MMMM
 [UNDER]
 MMGGGGGGGGGGGGGGGGGGGGGGGGGG
@@ -57,9 +58,9 @@ GGGGGGGGGGGGGGGGGGGGGGGGGGGG
 MMGRGGGGGGGGGGGGGGGGGGGGGGGG
 MMGGGGGGGGGGGGGGGGGGGGGGGGGG
 [ENTITY]
-Skel skeleton.png 416 32
-Skel skeleton.png 576 32
-Skel skeleton.png 704 32
+Skel skeletonDown.png 416 32
+Skel skeletonDown.png 576 32
+Skel skeletonDown.png 704 32
 
 
 
