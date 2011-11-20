@@ -2,7 +2,7 @@
 [RSC]
 G grassDead.png
 # wall.png
-@ wall.png
+@ impassableRockDead.png
 % wall.png
 T treeDying.png
 

@@ -11,6 +11,7 @@ class TerrainLayer(pygame.Surface):
 	'''
 		This builds a map background
 	'''
+	
 	def __init__(self, mapname):
 		#make a surface
 		#load the images
@@ -35,3 +36,12 @@ class TerrainLayer(pygame.Surface):
 		for y in range(HEIGHT/TILEY):
 			for x in range(0, (WIDTH/TILEX)-4):
 				self.blit(imagemap[thismap.belowLayer[y][x]], ((x+2)*TILEX, y*TILEY))
+
+		#load sprites for at layer
+#		self.atGroup = pygame.sprite.RenderPlain()
+#		for y in range(HEIGHT/TILEY):
+#			for x in range(0, (WIDTH/TILEX)-4):
+#				self.atGroup.add(util.loadImage(imagemap[thismap.belowLayer[y][x]]))
+
+	def drawTerrain(self,screen):
+		screen.blit(self,self.get_rect())

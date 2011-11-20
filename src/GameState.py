@@ -26,24 +26,15 @@ class GameState(State):
 	
 	bgGroup = pygame.sprite.OrderedUpdates()
 	playerGroup = pygame.sprite.RenderPlain()
-<<<<<<< Updated upstream
-	background = 0
-	
-=======
 	guiGroup = pygame.sprite.OrderedUpdates()
->>>>>>> Stashed changes
 
 	def __init__(self, main):
 		# transition from another state
 		State.__init__(self,main)
 		self.loadPlayer()
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-		self.background = TerrainLayer()
-=======
 		self.hud = Actor(IMG_HUD,-1)
 		self.hud.setPos(WIDTH/2,HEIGHT-100)
-		self.guiGroup.add(self.hud)
+		GameState.guiGroup.add(self.hud)
 		self.health = 7
 		self.hudHearts = []
 		self.hudSlot = [None]*3
@@ -52,10 +43,7 @@ class GameState(State):
 			self.hudSlot[i] = Actor(IMG_SLOT,-1)
 			self.hudSlot[i].setPos(115 + i*115, HEIGHT-100)
 			self.guiGroup.add(self.hudSlot[i])
->>>>>>> Stashed changes
-=======
 		self.background = TerrainLayer("d1_0_0.map")
->>>>>>> 25f38df1656e6eab72477197eece0a3358655bf0
 
 	def __del__(self):
 		# transition to another state
@@ -141,8 +129,9 @@ class GameState(State):
 		
 	def draw(self):
 		#draw background
-		self.main.screen.blit(self.background, self.background.get_rect())
-		
+		#self.main.screen.blit(self.background, self.background.get_rect())
+		self.background.drawTerrain(self.main.screen);	
+
 		# draw player	
 		GameState.playerGroup.draw(self.main.screen)
 		

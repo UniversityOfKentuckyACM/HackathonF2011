@@ -24,11 +24,11 @@ START_Y = HEIGHT / 2
 PLAYER_SPEED = 8
 
 # Player up, down, left, right sprites
-PLAYER_IMAGES = ["characterUp1.png", "characterDown1.png", "characterLeft1.png", "characterRight1.png"]
-PLAYER_UP = PLAYER_IMAGES[0]
-PLAYER_DOWN = PLAYER_IMAGES[1]
-PLAYER_LEFT = PLAYER_IMAGES[2]
-PLAYER_RIGHT = PLAYER_IMAGES[3]
+PLAYER_IDLE_IMAGES = ["characterUp1.png", "characterDown1.png", "characterLeft1.png", "characterRight1.png"]
+PLAYER_IDLE_UP = PLAYER_IDLE_IMAGES[0]
+PLAYER_IDLE_DOWN = PLAYER_IDLE_IMAGES[1]
+PLAYER_IDLE_LEFT = PLAYER_IDLE_IMAGES[2]
+PLAYER_IDLE_RIGHT = PLAYER_IDLE_IMAGES[3]
 
 START_MENU = "START"
 PLAY = "PLAY"
