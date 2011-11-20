@@ -87,7 +87,7 @@ class Player(Actor.Actor):
 		'''
 			When mouse is pressed, sword is pushed out
 		'''
-		print "sword swung"
+		
 	
 	
 	# TODO
