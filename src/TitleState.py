@@ -3,7 +3,6 @@ import pygame
 import pygame.gfxdraw
 import util
 import sys
-import os
 from Actor import Actor
 from pygame.locals import *
 from GameState import GameState
@@ -35,16 +34,14 @@ class TitleState(State):
 		TitleState.btnStartGroup.add(self.btnStart)
 		
 		pygame.mixer.init()
-		filename = "godspeed.mid"
-		path = os.path.join(util.GAME_SOUNDS, filename)
-		path = util.filepath(path)
-		pygame.mixer.music.load(path)
+		pygame.mixer.music.load("../data/sounds/godspeed.mid")
 		pygame.mixer.music.play()
-
+		
 	def __del__(self):
 		# transition to another state
 		TitleState.titleGroup.empty()
 		TitleState.btnStartGroup.empty()
+		pygame.mixer.music.stop()
 		
 	def update(self):
 		self.tick += 1
@@ -58,6 +55,7 @@ class TitleState(State):
 			self.tick = 0
 			if self.ready:
 				self.main.changeState(GameState(self.main))
+				
 		
 		TitleState.btnStartGroup.update()
 		TitleState.titleGroup.update()
@@ -70,10 +68,13 @@ class TitleState(State):
 			if event.type == pygame.KEYDOWN:
 				if event.key == K_ESCAPE:
 					sys.exit(0)
-				if event.key == K_RETURN:					
+				if event.key == K_RETURN:
+					pygame.mixer.music.stop()
+					pygame.mixer.music.load("../data/sounds/HeroOh.mp3")
+					pygame.mixer.music.play()				
 					self.ready = True
 					self.tick = 0
-					self.tickInterval = 60
+					self.tickInterval = 120
 		
 	def draw(self):
 		# draw group stuff
