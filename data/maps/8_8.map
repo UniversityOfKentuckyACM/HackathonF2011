@@ -1,8 +1,8 @@
 8-8
 [RSC]
-# wall.png
-@ wall.png
-% wall.png
+# impassableRockDead.png
+@ impassableRockDead.png
+% snowyMountain.png
 G grassDead.png
 
 [AT]
