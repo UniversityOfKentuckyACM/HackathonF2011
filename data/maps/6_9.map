@@ -1,4 +1,4 @@
-5_9.map
+6_9.map
 [RSC]
 G grassDead.png
 M rocks.png
@@ -58,8 +58,8 @@ GGGGGGGGGGGGGGGGGGGGGGGGGGGG
 MMGRGGGGGGGGGGGGGGGGGGGGGGGG
 MMGGGGGGGGGGGGGGGGGGGGGGGGGG
 [ENTITY]
-Skel skeleton.png 320 480
-Skel2 skeleton.png 320 512
+Skel skeletonDown.png 320 480
+Skel2 skeletonDown.png 320 512
 
 
 
