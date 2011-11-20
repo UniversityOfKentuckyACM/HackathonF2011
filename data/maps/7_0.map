@@ -1,9 +1,9 @@
 The (7,0) position in the map grid
 
 [RSC]
-O <OCEAN.png>
-S <SAND.png>
-B <BRIDGE.png>
+O water.png
+S sand.png
+B waterWithStone.png
 
 [AT]
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
@@ -58,3 +58,4 @@ BBBBBBBBBB...SSSSSSSSSSSSSSS
 ............................
 
 [ENTITY]
+skeleton skeletonDown.png 384 576

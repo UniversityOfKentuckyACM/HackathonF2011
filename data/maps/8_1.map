@@ -1,10 +1,11 @@
 The (8,1) position in the map grid
 
 [RSC]
-O <OCEAN.png>
-S <SAND.png>
-B <BRIDGE.png>
-G <GRASS.png>
+O water.png
+S sand.png
+B waterWithStone.png
+G grass.png
+M rocksBrown.png
 
 [AT]
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
