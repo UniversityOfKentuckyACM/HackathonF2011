@@ -1,0 +1,12 @@
+7_8.map 7_7.map 7_9.map none none
+7_9.map 7_8.map none 8_9.map none
+8_5.map 8_4.map 8_6.map 9_5.map 7_5.map
+8_6.map 8_5.map 8_7.map 9_6.map none
+8_7.map 8_6.map 8_8.map 9_7.map none
+8_8.map 8_7.map 8_9.map 9_8.map none
+8_9.map 8_8.map none 9_9.map 7_9.map
+9_5.map none 9_6.map none 8_5.map
+9_6.map 9_5.map 9_7.map none 8_6.map
+9_7.map 9_6.map 9_8.map none 8_7.map
+9_8.map 9_7.map 9_9.map none 8_8.map
+9_9.map 9_8.map none none 8_9.map

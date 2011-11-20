@@ -57,3 +57,7 @@ GGGGGGGGGGGGGGGGGGGGGGGGGGGG
 
 [ENTITY]
 door dungeonDoor.png 640 64 d1_0_1.map
+skeleton skeletonDown.png 640 320
+skeleton skeletonDown.png 620 280
+skeleton skeletonDown.png 660 200
+skeleton skeletonDown.png 640 70
