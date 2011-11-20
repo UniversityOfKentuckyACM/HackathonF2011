@@ -1,8 +1,6 @@
 The (5,0) position in the map grid
-
 [RSC]
 O water.png
-
 [AT]
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
@@ -28,7 +26,6 @@ OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
-
 [UNDER]
 ............................
 ............................
@@ -54,5 +51,4 @@ OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 ............................
 ............................
 ............................
-
 [ENTITY]

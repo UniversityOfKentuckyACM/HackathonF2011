@@ -1,10 +1,8 @@
 The (8,0) position in the map grid
-
 [RSC]
 O water.png
 S sand.png
 B waterWithStone.png
-
 [AT]
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
@@ -30,7 +28,6 @@ OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 ......OOOOOOOOOOOOOO........
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
-
 [UNDER]
 ............................
 ............................
@@ -56,5 +53,4 @@ SSSSSSSS...........SSSSSSSSS
 SSSSSS..............SSSSSSSS
 ............................
 ............................
-
 [ENTITY]
