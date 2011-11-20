@@ -1,10 +1,13 @@
 The (8,1) position in the map grid
 
 [RSC]
-O <OCEAN.png>
-S <SAND.png>
-B <BRIDGE.png>
-G <GRASS.png>
+O water.png
+S sand.png
+B waterWithStone.png
+G grass.png
+M rockyMountain.png
+t treeTop.png
+b treeBottom.png
 
 [AT]
 OOOOOOOOOOOOOOOOOOOOOOOOOOOO
@@ -12,9 +15,9 @@ OOOOOOOOOOOOOOOOOOOOOOOOOOOO
 ............................
 ............................
 ............................
-............................
-............................
-............................
+.........t..................
+...t.....b.........t........
+...b...............b........
 ............................
 MMMMMMMMMMMMM...............
 MMMMMMMMMMMMMMMMMMMMMMMMMMMM
@@ -38,9 +41,9 @@ SSSSSSSSSSSSS...............
 SSSSSSSSSSSSSSSSSSSSSSSSSSSS
 SSSSSSSSSSSSSSSSSSSSSSSSSSSS
 GGGGGGGGGGGGGSSSSSSSSSSSSSSS
-GGGGGGGGGGGGGGGGGGGGGGGGGGGG
-GGGGGGGGGGGGGGGGGGGGGGGGGGGG
-GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGGG.GGGGGGGGGGGGGGGGGG
+GGG.GGGGG.GGGGGGGGG.GGGGGGGG
+GGG.GGGGGGGGGGGGGGG.GGGGGGGG
 GGGGGGGGGGGGGGGGGGGGGGGGGGGG
 .............GGGGGGGGGGGGGGG
 ............................

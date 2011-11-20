@@ -1,12 +1,12 @@
 Tile6_4
 [RSC]
-W wall.png
-M mountain.png
+r rubble.png
+M rockyMountain.png
 G grass.png
 [AT]
-........W................W..
-........W................W..
-........WWWWWWWWWWWWWWWWWW..
+........r...............r...
+........rr..............rr..
+.........rrrrrr.rrrr.rr..r..
 ............................
 ............................
 ............................
@@ -40,9 +40,9 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMM
 [UNDER]
-GGGGGGGGGGGGGGGGGGGGGGGGGGGG
-GGGGGGGGGGGGGGGGGGGGGGGGGGGG
-GGGGGGGGGGGGGGGGGGGGGGGGGGGG
+GGGGGGGG.GGGGGGGGGGGGGGGG.GG
+GGGGGGGG.GGGGGGGGGGGGGGGG.GG
+GGGGGGGG..................GG
 GGGGGGGGGGGGGGGGGGGGGGGGGGGG
 GGGGGGGGGGGGGGGGGGGGGGGGGGGG
 GGGGGGGGGGGGGGGGGGGGGGGGGGGG
