@@ -26,7 +26,7 @@ class GameState(State):
 	
 	bgGroup = pygame.sprite.OrderedUpdates()
 	playerGroup = pygame.sprite.RenderPlain()
-	
+	guiGroup = pygame.sprite.OrderedUpdates()
 
 	def __init__(self, main):
 		# transition from another state
@@ -34,7 +34,7 @@ class GameState(State):
 		self.loadPlayer()
 		self.hud = Actor(IMG_HUD,-1)
 		self.hud.setPos(WIDTH/2,HEIGHT-100)
-		self.guiGroup.add(self.hud)
+		GameState.guiGroup.add(self.hud)
 		self.health = 7
 		self.hudHearts = []
 		self.hudSlot = [None]*3
