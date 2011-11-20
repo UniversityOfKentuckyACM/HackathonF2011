@@ -11,7 +11,7 @@ class Player(Actor.Actor):
 		Player class. images is a list of images for each direction. We may need
 		to alter this to support animation.
 	'''
-	def __init__(self):
+	def __init__(self,gameState):
 		super(Player,self).__init__()
 		
 		# load all images
@@ -28,6 +28,8 @@ class Player(Actor.Actor):
 		# assign image and position
 		self.setImage(self.images[self.direction])
 		self.setPos(START_X, START_Y)
+
+		self.gameState = gameState
 	
 	# Orient player with mouse
 	def orient(self, mousePos):
@@ -91,3 +93,14 @@ class Player(Actor.Actor):
 	# TODO
 	def update(self):
 		super(Player,self).update()
+
+		# Check to see if we have touched edge of the screen
+		if self.rect.left < TILEX * 2:
+			self.gameState.nextMap("left", self.getPos())
+		elif self.rect.right > WIDTH - (TILEX*2):
+			self.gameState.nextMap("right", self.getPos())
+		elif self.rect.top < 0:
+			self.gameState.nextMap("up", self.getPos())
+		elif self.rect.bottom > HEIGHT:
+			self.gameState.nextMap("down", self.getPos())
+

@@ -50,7 +50,7 @@ class GameState(State):
 		pass
 		
 	def loadPlayer(self):
-		self.player = Player()
+		self.player = Player(self)
 		GameState.playerGroup.add(self.player)
 	
 	def update(self):
@@ -80,7 +80,7 @@ class GameState(State):
 				
 			for i in range(0,full+halve):
 				self.hudHearts[i].setPos(WIDTH-60-i*60,HEIGHT-50)
-				print i, (WIDTH-60-i*60,HEIGHT-50)
+				#print i, (WIDTH-60-i*60,HEIGHT-50)
 				
 	
 	def handleEvent(self):
@@ -125,6 +125,11 @@ class GameState(State):
 				self.player.unMove(3)
 			
 	def checkCollisions(self):
+		pass
+	
+	def nextMap(self, direction, pos):
+		#print "moving to: " + direction + " via: " + str(pos)
+		self.background = TerrainLayer("d1_1_1.map")
 		pass
 		
 	def draw(self):
