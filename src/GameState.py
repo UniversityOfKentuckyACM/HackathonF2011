@@ -53,6 +53,13 @@ class GameState(State):
 			
 		self.updateHudHealth()
 
+		pygame.mixer.init()
+		filename = "worldAmbient.mp3"
+		path = os.path.join(util.GAME_SOUNDS, filename)
+		path = util.filepath(path)
+		pygame.mixer.music.load(path)
+		pygame.mixer.music.play()
+
 	def __del__(self):
 		# transition to another state
 		pass
@@ -147,8 +154,10 @@ class GameState(State):
 		
 			
 	def checkCollisions(self):
-		pass
-	
+		# Check for atLayer collisions 
+		for hits in pygame.sprite.spritecollide(self.player, self.background.atGroup, 0):
+			pass
+
 	def nextMap(self, direction, pos):
 		# print "moving to: " + direction + " via: " + str(pos)
 		mmap = ""

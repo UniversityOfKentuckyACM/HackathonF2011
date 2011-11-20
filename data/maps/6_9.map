@@ -5,12 +5,13 @@ M rocks.png
 # waterToxic.png
 W wall.png
 R rubbleDead.png
-T treeDying.png
+T treeDyingBottom.png
+Q treeDyingTop.png
 [AT]
 MMMMMMMMMM..............MMMM
-MMMMMM..................MMMM
+MMMMMM........Q.........MMMM
 MMMM..........T.........MMMM
-MMM.....####............MMMM
+MMM..Q..####.....Q......MMMM
 MMMM.T.######....T......MMMM
 MMMMM###########........MMMM
 MMMMMMM##########.......MMMM
@@ -19,15 +20,15 @@ MMMMMMMMMMMM########....MMMM
 MMMMMMMMMMMM########....MMMM
 MMMMMMMMMMMM########....MMMM
 MMMMMMMMMMMM########....MMMM
-.............######.....MMMM
+...Q.Q.Q.Q.Q.######....QMMMM
 ...T.T.T.T.T..####.....TMMMM
-MM.............##.......MMMM
+MM.............##......QMMMM
 MMMM...................TMMMM
-MMMM....................MMMM
-MMMM....T.T.T.....T.T..TMMMM
-TTTTTT.................MMMMM
-.....TT.....TTTTT......MMMMM
-......TT...TTTTTTT....MMMMMM
+MMMM....Q.Q.Q.....Q.Q..QMMMM
+QQQQQ...T.T.T.....T.T..TMMMM
+TTTTTQQ................MMMMM
+.....TT....QQQQQQQ.....MMMMM
+......QQ...TTTTTTT....MMMMMM
 ......TT............MMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMM
