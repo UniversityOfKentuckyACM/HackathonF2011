@@ -3,7 +3,7 @@ The (4,0) position in the world map
 G ground.png
 O water.png
 S sand.png
-s <HALFSAND.png>
+s sand.png 'Change back to halfsand.png when such file exists
 [AT]
 .......OOOOOOOOOOOOOOOOOOOOO
 .......OOOOOOOOOOOOOOOOOOOOO

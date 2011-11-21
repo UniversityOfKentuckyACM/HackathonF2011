@@ -182,6 +182,9 @@ class GameState(State):
 		if not mmap == 'none':
 			self.currentMap = mmap
 			self.background = TerrainLayer(mmap)
+
+        # Added for debugging purposes. Remove when not needed
+        print "MAP: ",mmap
 		
 	def draw(self):
 		#draw background

@@ -1,0 +1,14 @@
+CHANGELOG
+
+11/21/11 - zKarp
+GameState.py : Added print current map when u change maps. Debugging Purposes
+MAP 4_0: Changed halfsand.png to sand.png.. (Files doesn't exist)
+MAP 4_3: 1 character short for a row. Fixed
+MAP 5_7: 1 character short for a row. Fixed
+MAP 6_7: 1 character short for a row. Fixed
+MAP 7_9: 4 Rows short for belowlayer. Fixed
+MAP 8_5: Hedge mispelled. Corrected
+MAP 8_9: 4 Rows short for belowlayer. Fixed
+MAP 9_1: Fixed rockmountains.png to rockyMountain.png
+MAP 9_2: Fixed rock.png to rocks.png
+MAP 9_9: 4 Rows short for belowlayer. Fixed
