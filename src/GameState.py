@@ -150,10 +150,10 @@ class GameState(State):
 				self.player.unMove(3)
 
 		elif event.type == pygame.MOUSEBUTTONDOWN:
-            if pygame.mouse.get_pressed()[0]:
-                self.player.swingSword()
-            if pygame.mouse.get_pressed()[2]:
-                self.player.shootBow()
+            		if pygame.mouse.get_pressed()[0]:
+                		self.player.swingSword()
+            		if pygame.mouse.get_pressed()[2]:
+                		self.player.shootBow()
 			
 	def checkCollisions(self):
 		# Check for atLayer collisions 

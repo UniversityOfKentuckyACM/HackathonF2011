@@ -118,22 +118,21 @@ class Player(Actor.Actor):
 		 	self.swordRight.rect.topleft = self.rect.topright
 			self.swordRight.add(self.gameState.playerGroup)
 
-    # TODO: Add to this
-    def shootBow(self):
-        '''
-        When right mouse is pressed, arrow is fire infront of character
+    	# TODO: Add to this
+    	def shootBow(self):
+        	'''
+        	When right mouse is pressed, arrow is fire infront of character
 		'''
-        print "Arrow Fired"
+        	print "Arrow Fired"
         
-    # TODO: Add to this
-    def useMagic(self):
-        '''
-        When space bar is pressed, magic is thrown towards the mouse pointer
-        Or infront of the character *Choice*
-        '''
-        print "Magic Bolt Fired"
+   	# TODO: Add to this
+   	def useMagic(self):
+        	'''
+        	When space bar is pressed, magic is thrown towards the mouse pointer
+        	Or infront of the character *Choice*
+        	'''
+        	print "Magic Bolt Fired"
 	
-        
 	def update(self):
 		super(Player,self).update()
 
@@ -146,4 +145,3 @@ class Player(Actor.Actor):
 			self.gameState.nextMap("up", self.getPos())
 		elif self.rect.bottom > HEIGHT:
 			self.gameState.nextMap("down", self.getPos())
-
