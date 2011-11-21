@@ -103,7 +103,7 @@ class Player(Actor.Actor):
 	# TODO: FIX THIS
 	def swingSword(self):
 		'''
-			When mouse is pressed, sword is pushed out
+			When left mouse is pressed, sword is pushed out
 		'''
 		if self.direction == 0:
 		 	self.swordUp.rect.bottomleft = self.rect.topleft
@@ -117,7 +117,23 @@ class Player(Actor.Actor):
 		elif self.direction == 3:
 		 	self.swordRight.rect.topleft = self.rect.topright
 			self.swordRight.add(self.gameState.playerGroup)
+
+    # TODO: Add to this
+    def shootBow(self):
+        '''
+        When right mouse is pressed, arrow is fire infront of character
+		'''
+        print "Arrow Fired"
+        
+    # TODO: Add to this
+    def useMagic(self):
+        '''
+        When space bar is pressed, magic is thrown towards the mouse pointer
+        Or infront of the character *Choice*
+        '''
+        print "Magic Bolt Fired"
 	
+        
 	def update(self):
 		super(Player,self).update()
 

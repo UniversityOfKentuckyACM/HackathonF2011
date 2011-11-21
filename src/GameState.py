@@ -129,6 +129,8 @@ class GameState(State):
 				self.player.move(2)
 			if event.key == MOVEMENT_KEYS[3]:
 				self.player.move(3)
+            if event.key == MAGIC_ATTACK_KEY:
+                self.useMagic()
 			# testing
 			if event.key == K_DOWN:
 				self.health -= 1
@@ -148,10 +150,10 @@ class GameState(State):
 				self.player.unMove(3)
 
 		elif event.type == pygame.MOUSEBUTTONDOWN:
-                        if pygame.mouse.get_pressed()[0]:
-                                self.player.swingSword()
-
-		
+            if pygame.mouse.get_pressed()[0]:
+                self.player.swingSword()
+            if pygame.mouse.get_pressed()[2]:
+                self.player.shootBow()
 			
 	def checkCollisions(self):
 		# Check for atLayer collisions 

@@ -1,7 +1,8 @@
 CHANGELOG
 
 11/21/11 - zKarp
-GameState.py : Added print current map when u change maps. Debugging Purposes
+GameState.py : Added print current map when you change maps. Debugging Purposes
+	-Added magic attack and shoot bow events 
 MAP 4_0: Changed halfsand.png to sand.png.. (Files doesn't exist)
 MAP 4_3: 1 character short for a row. Fixed
 MAP 5_7: 1 character short for a row. Fixed
@@ -12,3 +13,5 @@ MAP 8_9: 4 Rows short for belowlayer. Fixed
 MAP 9_1: Fixed rockmountains.png to rockyMountain.png
 MAP 9_2: Fixed rock.png to rocks.png
 MAP 9_9: 4 Rows short for belowlayer. Fixed
+Player.py: Added shootBow and useMagic functions
+
