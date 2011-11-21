@@ -130,7 +130,7 @@ class GameState(State):
 			if event.key == MOVEMENT_KEYS[3]:
 				self.player.move(3)
             		if event.key == MAGIC_ATTACK_KEY:
-                		self.useMagic()
+                		self.player.useMagic()
 			# testing
 			if event.key == K_DOWN:
 				self.health -= 1
