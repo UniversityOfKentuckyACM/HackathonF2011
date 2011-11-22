@@ -1,5 +1,8 @@
 CHANGELOG
 
+11/22/11 - zKarp
+Player.py : Added collision detection. Works only with single key being pressed. Multikey causes a COD like elevator effect
+
 11/21/11 - zKarp
 GameState.py : Added print current map when you change maps. Debugging Purposes
 	-Added magic attack and shoot bow events 
