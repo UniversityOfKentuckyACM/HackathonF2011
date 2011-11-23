@@ -4,6 +4,7 @@ import Actor
 import util
 
 from Vector2 import Vector2
+from Magic import Magic
 
 from config import *
 
@@ -142,7 +143,11 @@ class Player(Actor.Actor):
         	When space bar is pressed, magic is thrown towards the mouse pointer
         	Or infront of the character *Choice*
         	'''
-        	print "Magic Bolt Fired"
+        	pos = self.rect.center
+        	self.magi = Magic(pos[0],pos[1])
+
+        	self.magi.add(self.gameState.playerGroup)
+        	
 	
 	def update(self):
 		super(Player,self).update()

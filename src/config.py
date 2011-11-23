@@ -24,6 +24,7 @@ START_X = WIDTH / 2
 START_Y = HEIGHT / 2
 
 PLAYER_SPEED = 8
+MAGIC_SPEED = (3,-3)
 
 # Player up, down, left, right sprites
 PLAYER_IDLE_IMAGES = ["characterUp1.png", "characterDown1.png", "characterLeft1.png", "characterRight1.png"]
@@ -31,6 +32,9 @@ PLAYER_IDLE_UP = PLAYER_IDLE_IMAGES[0]
 PLAYER_IDLE_DOWN = PLAYER_IDLE_IMAGES[1]
 PLAYER_IDLE_LEFT = PLAYER_IDLE_IMAGES[2]
 PLAYER_IDLE_RIGHT = PLAYER_IDLE_IMAGES[3]
+
+#Weapons sprites
+MAGIC_ATTACK_IMAGE = "fireballRight.png"
 
 START_MENU = "START"
 PLAY = "PLAY"

@@ -1,5 +1,10 @@
 CHANGELOG
 
+11/23/11 - zKarp
+Added Magic.py
+Created the ability to shoot fireballs with the space bar.
+*Work still needs to be done to shoot to mouse position and allow only 1 or 2 at a time.
+
 11/22/11 - zKarp
 Player.py : Added collision detection. Works only with single key being pressed. Multikey causes a COD like elevator effect
 
