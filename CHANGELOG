@@ -1,5 +1,11 @@
 CHANGELOG
 
+11/23/11 - blarg
+Added: /maps/map_builder
+       /maps/map_builder/map_builder.py
+       /maps/map_builder/sample.map.plan
+       /maps/map_builder/sample.map
+
 11/23/11 - zKarp
 Added Magic.py
 Created the ability to shoot fireballs with the space bar.
